@@ -1,19 +1,3 @@
-function validateNameFields(fname, mname, lname) {
-    const namePattern = /^[a-zA-Z\s]+$/; // Regular expression for only letters and spaces
-
-    if (!namePattern.test(fname)) {
-        return 'First name must not contain numbers.';
-    }
-    if (!namePattern.test(mname)) {
-        return 'Middle name must not contain numbers.';
-    }
-    if (!namePattern.test(lname)) {
-        return 'Last name must not contain numbers.';
-    }
-    
-    return null; // All names are valid
-}
-
 document.getElementById('appointmentForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission for validation
     const fname = document.getElementById('fname').value.trim();
@@ -33,10 +17,17 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         return;
     }
 
-// Validate names
-    const nameError = validateNameFields(fname, mname, lname);
-    if (nameError) {
-        messageDiv.innerHTML = `<div class="alert alert-danger">${nameError}</div>`;
+// Validate names to ensure they don't contain integers
+    if (!isNaN(fname)) {
+        messageDiv.innerHTML = '<div class="alert alert-danger">First name must not contain numbers.</div>';
+        return;
+    }
+    if (!isNaN(mname)) {
+        messageDiv.innerHTML = '<div class="alert alert-danger">Middle name must not contain numbers.</div>';
+        return;
+    }
+    if (!isNaN(lname)) {
+        messageDiv.innerHTML = '<div class="alert alert-danger">Last name must not contain numbers.</div>';
         return;
     }
     
