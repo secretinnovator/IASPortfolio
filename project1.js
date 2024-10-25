@@ -22,13 +22,13 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         messageDiv.innerHTML = '<div class="alert alert-danger">First name must not contain numbers.</div>';
         return;
     }
-     else if (!isNaN(mname)) {
+     if (!isNaN(mname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Middle name must not contain numbers.</div>';
-        return;
+        return true;
     }
-    else if (!isNaN(lname)) {
+    if (!isNaN(lname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Last name must not contain numbers.</div>';
-        return;
+        return true;
     }
     
 // Ensure all name fields are unique
