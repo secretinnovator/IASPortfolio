@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&family=Sedan:ital@0;1&family=Vidaloka&display=swap');
+/* font-family: "Pavanam", sans-serif; */
+/* font-family: "Sedan", serif; */
+/* font-family: "Vidaloka", serif; */
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+nav{
+  overflow: hidden;
+}
+
+.img-fluid{
+  width: 40px;
+}
+
+.circular {     
+  
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%; 
+    background-color: #c7c9fa; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* font-size: 10px; */
+    border: none; 
+    /* position: fixed;  */
+    padding: 0;
+    position: relative;
+    top: 110px;
+    left: 50px; 
+    margin-bottom: 0;
+  }
+  
+  .circular-two {
+    width: 110px;
+    height: 110px; 
+    border-radius: 50%;
+    background-color: #c7c9fa;
+    /* display: flex; */
+    /* align-items: center;  */
+    /* justify-content: center;  */
+    color: white;
+    /* font-size: 10px;  */
+    /* text-align: center;  */
+    border: none; 
+    position: relative;
+    /* position: absolute; */
+    padding: 0;
+    bottom: 330px;
+    left: 290px;
+    margin-bottom: 0;
+  }
+  
+  .circular-three {
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    background-color: #c7c9fa; 
+    /* display: flex; */
+    /* align-items: center;  */
+    /* justify-content: center;  */
+    color: white; 
+    /* font-size: 10px;  */
+    /* text-align: center;  */
+    border: none; 
+    padding: 0;
+    /* bottom: 810px;
+    left: 830px; */
+    position: relative;
+    /* position: absolute; */
+    bottom: 340px;
+    left: 380px;
+    margin-bottom: 0;
+  }
+  
+  /**/
+  .circular img{
+    width: 80%;
+    border-radius: 50%;
+  }
+
+  .me{
+    color: #6E0489;
+    font-family: "Vidaloka", serif;
+    font-size: 3.5rem;
+  }
+
+  .section{
+    font-family: "Pavanam", sans-serif;
+    margin-top: -30px;
+    font-size: 1.2rem;
+  }
+
+  .objective{
+    color: #333333;
+    font-family: "Sedan", serif;
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+
+  .subject{
+    font-family: "Pavanam", sans-serif;
+    font-size: 2rem;
+  }
+
+  .contacts p{
+    font-family: "Pavanam", sans-serif;
+    margin-left: 6rem;
+    font-size: 1.4rem;
+  }
+
+  .fa-github{
+    color: gray;
+    font-size: 2rem;
+  }
+
+  .fa-phone{
+    color: green;
+    font-size: 2rem;
+  }
+
+  .fa-envelope{
+    color: red;
+    font-size: 2rem;
+  }
+
+  .projects{
+    font-family: "Pavanam", sans-serif;
+    margin-top: 20px;
+  }
+
+  .projects .project1{
+    margin-right: 20rem;
+}
+
+    .project1{
+        padding: 8px;
+        text-align: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+    background-color: #C7C9FA;
+    }
+
+    .project2{
+        padding: 8px;
+        text-align: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #F6A07A;
+    }
+
+    .projects a{
+        color: black;
+        text-decoration: none;
+        font-size: medium;
+    }
+
+    @media (max-width: 768px) {
+        .circular {     
+  
+            width: 250px; 
+            height: 250px; 
+            border-radius: 50%; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none; 
+            padding: 0;
+            position: relative;
+            top: 110px;
+            left: 60px; 
+            margin-bottom: 0;
+          }
+          
+          .circular-two {
+            width: 80px;
+            height: 80px; 
+            border-radius: 50%;
+            position: relative;
+            padding: 0;
+            bottom: 210px;
+            left: 220px;
+            margin-bottom: 0;
+          }
+          
+          .circular-three {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            border: none; 
+            padding: 0;
+            position: relative;
+            bottom: 210px;
+            left: 290px;
+            margin-bottom: 0;
+          }
+          
+          /**/
+          .circular img{
+            width: 80%;
+            border-radius: 50%;
+          }
+
+          .me{
+            font-size: 33px;
+          }
+
+          .section{
+            font-size: 20px;
+          }
+
+          .objective{
+            font-size: 25px;
+          }
+
+          .subject{
+            font-size: 20px;
+          }
+
+          .contacts p{
+            font-size: 13px;
+          }
+          
+          .contacts i{
+            font-size: 20px;
+          }
+
+          .projects p{
+            width: 120px;
+            height: 45px;
+            font-size: 20px;
+            overflow: hidden;
+          }
+    }
+
+    @media (max-width: 400px) {
+      .circular{
+        padding: 0;
+        margin-left: 60px;
+      }
+
+      .circular-two{
+        margin-left: 75px;
+      }
+
+      .circular-three{
+        margin-left: 75px;
+      }
+
+      .me{
+        font-size: 1.6rem;
+      }
+
+      .section{
+        font-size: 1.3rem;
+      }
+
+      .objective{
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .contacts p{
+        font-size: 0.6rem;
+        padding: 0;
+        margin: 0;
+        margin-right: 1rem;
+      }
+
+      .projects .project1{
+        padding: 0;
+        margin: 0;
+        margin-right: 2rem;
+      }
+      .projects .project2{
+        padding: 0;
+        margin: 0;
+      }
+
+      footer{
+        margin-bottom: 20px;
+      }
+    }

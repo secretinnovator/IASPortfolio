@@ -1,0 +1,23 @@
+
+
+.body {
+    background-image: url(images/hhh.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: rgba(239, 238, 238, 0.8); /* Use RGBA to add transparency */
+    background-blend-mode: overlay; /* This blends the color and image */
+}
+
+#logo {
+
+	width: 35px;
+	height: 30px;
+
+}
+
+#collapsibleNavbar {
+
+	padding: 0px 20px;
+	font-size: 16px;
+}

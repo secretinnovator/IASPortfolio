@@ -1,0 +1,24 @@
+#logo {
+
+	width: 35px;
+	height: 30px;
+
+}
+
+.tourist-spots img {
+	height: 170px;
+}
+
+.tourist-spots2 img {
+	height: 400px;
+}
+
+.mt-2 {
+	margin-top: 2;
+}
+
+#collapsibleNavbar {
+
+	padding: 0px 20px;
+	font-size: 16px;
+}
