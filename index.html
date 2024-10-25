@@ -5,68 +5,282 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>marcOS</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="icons/main-icon.png">
     <script src="https://kit.fontawesome.com/f85e5882fb.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            color: black;
+        }
+
+        nav {
+            overflow: hidden;
+        }
+
+        .img-fluid {
+            width: 40px;
+        }
+
+        .circular-container {
+            position: relative;
+            width: 300px; 
+            height: 300px; 
+            margin: auto; 
+        }
+
+        .circular {
+            margin-top: 35%;
+            width: 350px;
+            height: 350px;
+            padding-top: 100%; 
+            border-radius: 50%;
+            background-color: #c7c9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circular img {
+            position: absolute;
+            width: 80%; 
+            height: auto;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .small-circle {
+            width: 110px; 
+            height: 110px;
+            border-radius: 50%;
+            background-color: #c7c9fa;
+            position: absolute;
+            top: -100px; 
+            right: 0; 
+            margin-right: -30px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .small-circle img {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .smallest-circle {
+            width: 45px; 
+            height: 45px;
+            border-radius: 50%;
+            background-color: #c7c9fa;
+            position: absolute;
+            top: 1.5px; 
+            right: 0;
+            margin-right: -60px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .smallest-circle img {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .me {
+            color: #6E0489;
+            font-family: "Vidaloka", serif;
+            font-size: 3.5rem;
+        }
+
+        .section {
+            font-family: "Pavanam", sans-serif;
+            margin-top: -30px;
+            font-size: 1.2rem;
+        }
+
+        .objective {
+            color: #333333;
+            font-family: "Sedan", serif;
+            margin-left: 2rem;
+            font-size: 2rem;
+        }
+
+        .subject {
+            font-family: "Pavanam", sans-serif;
+            font-size: 2rem;
+        }
+
+        footer {
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .contacts,
+        .projects {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin-bottom: 0.5rem;
+        }
+
+        .contacts p,
+        .projects p {
+            margin: 0 1rem; 
+            font-size: 1rem; 
+        }
+
+        .fa-github {
+            color: gray;
+            font-size: 2rem;
+        }
+
+        .fa-phone {
+            color: green;
+            font-size: 2rem;
+        }
+
+        .fa-envelope {
+            color: red;
+            font-size: 2rem;
+        }
+
+        .project1,
+        .project2 {
+            padding: 8px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 0.5rem; 
+        }
+
+        .project1 {
+            width: 150px;
+            height: 40px;
+            background-color: #C7C9FA;
+        }
+
+        .project2 {
+            width: 150px;
+            height: 40px;
+            background-color: #F6A07A;
+        }
+
+        .projects a {
+            color: black;
+            text-decoration: none;
+            font-size: medium;
+        }
+
+        @media (max-width: 768px) {
+            .me {
+                font-size: 33px;
+            }
+
+            .section {
+                font-size: 20px;
+            }
+
+            .objective {
+                font-size: 25px;
+            }
+
+            .subject {
+                font-size: 20px;
+            }
+
+            .contacts p {
+                font-size: 13px;
+            }
+
+            .contacts i {
+                font-size: 20px;
+            }
+
+            .projects p {
+                width: 120px;
+                height: 45px;
+                font-size: 20px;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .me {
+                font-size: 1.6rem;
+            }
+
+            .section {
+                font-size: 1.3rem;
+            }
+
+            .objective {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            .contacts p {
+                font-size: 0.6rem;
+            }
+
+            footer {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div>
         <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
             <div class="container">
-              <a href="index.html">
-                <img src="./images/navbar-logo.png" alt="" class="img-fluid">
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavbar"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse justify-content-end"
-                id="collapsibleNavbar"
-              >
-                <!-- NAVIGATION ITEM -->
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-center"
-                      href="achievements.html"
-                      >Achievements
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-center"
-                      href="uidesign.html"
-                      >UI Design</a
-                    >
-                  </li>
-                </ul>
-              </div>
+                <a href="index.html">
+                    <img src="./images/navbar-logo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-center" href="achievements.html">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center" href="uidesign.html">UI Design</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-sm-12">
-                <div class="circular"><img src="images/PERALTA.png" alt=""></div>
-                <div class="circular-two"></div>
-                <div class="circular-three"></div>
-    
+                <div class="circular-container">
+                    <div class="circular">
+                        <img src="images/PERALTA.png" alt="Profile Image">
+                    </div>
+                    <div class="small-circle">
+                        <img src="" alt="">
+                    </div>
+                    <div class="smallest-circle">
+                        <img src="" alt="">
+                    </div>
                 </div>
+            </div>
             <div class="col-md-8 col-sm-12">
                 <div class="name text-center pt-5">
                     <p class="me">MARC BRYANT NUÑEZ PERALTA</p>
                     <p class="section">BSIT-3A</p>
                 </div>
                 <div class="objective">
-                    <p> Creates clean, user-friendly web designs that enhance user experience and are visually
-                        appealing.</p>
+                    <p>Creates clean, user-friendly web designs that enhance user experience and are visually appealing.</p>
                 </div>
                 <div class="subject text-center">
                     <p>Favorite Major Subjects:</p>
@@ -75,7 +289,6 @@
                     <p>3rd year: Apps Development</p>
                 </div>
             </div>
-            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -83,15 +296,16 @@
 
 <footer>
     <div class="container">
-        <div class="contacts d-flex align-items-center justify-content-center">
+        <div class="contacts">
             <p class="github"><i class="fa-brands fa-github"></i> secretinnovator</p>
-            <p class="number"><i class="fa-solid fa-phone"></i>9081845905</p>
+            <p class="number"><i class="fa-solid fa-phone"></i> 9081845905</p>
             <p class="gmail"><i class="fa-regular fa-envelope"></i> marcbryant@gmail.com</p>
         </div>
-        <div class="projects d-flex align-items-center justify-content-center">
+        <div class="projects">
             <p class="project1"><a href="project1.html">Project 1</a></p>
             <p class="project2"><a href="project2.html">Project 2</a></p>
         </div>
     </div>
 </footer>
+
 </html>
