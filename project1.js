@@ -11,7 +11,12 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     const messageDiv = document.getElementById('message');
     
 // Validation for all fields
-    if(fname == "" || mname == "" || lname == "" || email == ""){
+    //if(fname == "" || mname == "" || lname == "" || email == ""){
+        //messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
+        //return;
+    //}
+
+    if (!fname || !mname || !lname || !email) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
         return;
     }
