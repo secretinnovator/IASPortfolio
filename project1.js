@@ -1,3 +1,19 @@
+function validateNameFields(fname, mname, lname) {
+    const namePattern = /^[a-zA-Z\s]+$/; // Regular expression for only letters and spaces
+
+    if (!namePattern.test(fname)) {
+        return 'First name must not contain numbers.';
+    }
+    if (!namePattern.test(mname)) {
+        return 'Middle name must not contain numbers.';
+    }
+    if (!namePattern.test(lname)) {
+        return 'Last name must not contain numbers.';
+    }
+    
+    return null; // All names are valid
+}
+
 document.getElementById('appointmentForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission for validation
     const fname = document.getElementById('fname').value.trim();
@@ -10,17 +26,21 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     const amPm = document.getElementById('amPm').value;
     const messageDiv = document.getElementById('message');
     
-// Validation for all fields
-    //if(fname == "" || mname == "" || lname == "" || email == ""){
-        //messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
-        //return;
-    //}
 
+// Validation for all fields
     if (!fname || !mname || !lname || !email) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
         return;
     }
 
+// Validate names
+    const nameError = validateNameFields(fname, mname, lname);
+    if (nameError) {
+        messageDiv.innerHTML = `<div class="alert alert-danger">${nameError}</div>`;
+        return;
+    }
+    
+// Ensure all name fields are unique
     if (fname === mname || fname === lname || mname === lname) {
     messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
     return;
