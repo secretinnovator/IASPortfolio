@@ -24,7 +24,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     }
      if (!isNaN(mname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Middle name must not contain numbers.</div>';
-        return true;
+        return;
     }
     if (!isNaN(lname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Last name must not contain numbers.</div>';
