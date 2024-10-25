@@ -9,6 +9,12 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     const minute = document.getElementById('minute').value;
     const amPm = document.getElementById('amPm').value;
     const messageDiv = document.getElementById('message');
+    
+// Validation for all fields
+    if(fname == "" || mname == "" || lname == "" || email == ""){
+        messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
+        return;
+    }
 
     
 
