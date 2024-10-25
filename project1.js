@@ -16,6 +16,11 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         return;
     }
 
+    if(fname === mname === lname === email){
+        messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
+        return;
+    }
+
     
 
     // Validation for time selection
