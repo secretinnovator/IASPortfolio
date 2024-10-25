@@ -16,10 +16,11 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         return;
     }
 
-    if(fname === mname === lname){
-        messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
-        return;
-    }
+    if (fname === mname || fname === lname || mname === lname) {
+    messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
+    return;
+}
+
 
     
 
