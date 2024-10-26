@@ -18,7 +18,7 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     }
 
 // Validate names to ensure they don't contain integers
-    if (!isNaN(fname)) {
+    if (isNaN(fname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">First name must not contain numbers.</div>';
         return;
     }
