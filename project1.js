@@ -9,41 +9,25 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     const minute = document.getElementById('minute').value;
     const amPm = document.getElementById('amPm').value;
     const messageDiv = document.getElementById('message');
-    
-
-// Validation for all fields
-    if (!fname || !mname || !lname || !email) {
+    if(fname == "" || mname == "" || lname == "" || email == ""){
         messageDiv.innerHTML = '<div class="alert alert-danger">Fill all fields.</div>';
         return;
     }
-
-
-    
-// Ensure all name fields are unique
-    if (fname === mname || fname === lname || mname === lname) {
-    messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
-    return;
-}
-
-    // Validate names to ensure they don't contain integers
-    if (!isNaN(fname)) {
+// Validate names to ensure they don't contain integers
+    if (containsNumber(fname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">First name must not contain numbers.</div>';
         return;
     }
-
-    if (!isNaN(!mname)) {
+     if (containsNumber(mname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Middle name must not contain numbers.</div>';
         return;
     }
-
-    if (!isNaN(!lname)) {
+    if (containsNumber(lname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Last name must not contain numbers.</div>';
         return;
     }
 
-
     
-
     // Validation for time selection
     if (!hour || !minute || !amPm) {
         messageDiv.innerHTML = '<div class="alert alert-danger">Please select a valid time.</div>';
@@ -69,6 +53,9 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
     }
 });
 
+function containsNumber(str) {
+  return /\d/.test(str);
+}
 
 window.onload = function() {
     const dateInput = document.getElementById('date');
@@ -87,3 +74,5 @@ window.onload = function() {
     
     dateInput.setAttribute('min', minDate);
 };
+
+
