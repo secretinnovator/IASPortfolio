@@ -17,7 +17,15 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         return;
     }
 
-// Validate names to ensure they don't contain integers
+
+    
+// Ensure all name fields are unique
+    if (fname === mname || fname === lname || mname === lname) {
+    messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
+    return;
+}
+
+    // Validate names to ensure they don't contain integers
     if (isNaN(fname)) {
         messageDiv.innerHTML = '<div class="alert alert-danger">First name must not contain numbers.</div>';
         return;
@@ -32,12 +40,6 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
         messageDiv.innerHTML = '<div class="alert alert-danger">Last name must not contain numbers.</div>';
         return;
     }
-    
-// Ensure all name fields are unique
-    if (fname === mname || fname === lname || mname === lname) {
-    messageDiv.innerHTML = '<div class="alert alert-danger">Fields must be unique.</div>';
-    return;
-}
 
 
     
